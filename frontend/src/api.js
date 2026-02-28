@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+// This will use your live backend URL when deployed, and localhost when testing on your computer
+const API_URL = import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000';
 
 const api = axios.create({
   baseURL: API_URL,
 });
+
 
 export const uploadDocument = (file) => {
   const formData = new FormData();
