@@ -17,8 +17,7 @@ origins = os.getenv("CORS_ORIGINS", "http://localhost:5173").split(",")
 
 app.add_middleware(
     CORSMiddleware,
-    # Replace "*" with your exact frontend URL (no slash at the end!)
-    allow_origins=["https://ai-research-assistant-qjox.onrender.com"], 
+    allow_origins=["https://ai-research-assistant-qjox.onrender.com"], # Make sure this matches!
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
